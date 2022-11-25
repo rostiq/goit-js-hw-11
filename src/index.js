@@ -20,15 +20,15 @@ const newLightbox = new SimpleLightbox('.gallery a', {
 
 async function axiosGetData() {
 
-    axios.defaults.baseURL = `${URL}`;
+    axios.defaults.baseURL = URL;
     axios.defaults.params = {
-      key: `${KEY}`,
-      q: `${query}`,
+      key: KEY,
+      q: query,
       image_type: 'photo',
       orientation: 'horizontal',
       safesearch: true,
-      page: `${page}`,
-      per_page: `${perPage}`,
+      page: page,
+      per_page: perPage,
     };
     return await axios.get();
 }
@@ -111,3 +111,4 @@ window.addEventListener("scroll", () => {
     }
 
 });
+

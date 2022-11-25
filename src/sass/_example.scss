@@ -1,28 +1,125 @@
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #2f2f37;
-  max-width: 960px;
-  padding: 16px;
-}
-
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
-}
-
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
+body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/hero.jpg) no-repeat center center fixed; 
   background-size: cover;
-  background-position: center;
+  padding: 0px 16px;
+  font-family: montserrat, sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.load-more {
+  border: 1px solid #fff;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 10px 5px;
+  color: #fff;
+  background: rgba(0,0,0,.2);
+  border-radius: 3px;
+  &:hover {
+    background: #fff;
+    color:#444;
+  }
+  &:active {
+    box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+  }
+  &:focus {
+    outline: 0;
+  }
+}  
+
+.is-hidden {
+  display: none;
+}
+
+.search-form {
+  width: calc(100% - 32px);
+  max-width: 480px;
+  height: 40px;
+  margin: 16px auto;
+  background: #444;
+  background: rgba(0,0,0,.2);
+  border-radius:  3px;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  input {
+    width: calc(100% - 40px);
+    padding: 10px 5px;
+    color: #ccc;
+    border: 0;
+    background: transparent;
+    border-radius: 3px 0 0 3px;
+    &:focus {
+      outline: 0;
+      background:transparent;
+    }
+  }
+  
+  button {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 39px;
+    width: 80px;
+    color: #fff;
+    background: transparent;
+    border-left: 1px solid #fff;
+    border-radius: 0 1px 3px 0;
+    &:hover {
+      background: #fff;
+      color:#444;
+    }
+    &:active {
+      box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+    }
+    &:focus {
+      outline: 0;
+    }
+  }  
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 16px;
+  margin: 16px auto;
+  max-width: 1200px;
+}
+
+.photo-card { 
+  max-width: 288px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  border: #fff solid 1px;
+
+  img {
+    width: 100%;
+    height: 75%;
+    border-radius: 3px 3px 0 0;
+    object-fit: cover;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px; 
+  border-radius: 3px;
+
+  &-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    font-size: 12px;
+    }
+}
+
